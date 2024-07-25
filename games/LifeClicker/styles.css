@@ -1,0 +1,223 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* custom button */
+
+#mainBtn,
+.barBtn {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 10px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#mainBtn:after
+.barBtn::after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#mainBtn:main,
+#mainBtn:focus,
+.barBtn:main,
+.barBtn:focus {
+  user-select: auto;
+}
+
+#mainBtn:hover:not(:disabled)
+.barBtn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+#mainBtn:disabled,
+.barBtn:disabled {
+  cursor: auto;
+}
+
+#mainBtn:active,
+.barBtn:active {
+  border-width: 4px 0 0;
+  background-color: #147bab;
+}
+
+
+/* custom button */
+
+.game {
+    position: relative; /* Allows for absolute positioning of menus */
+    width: 56.25vh; /* 100vh * (9/16) */
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url("https://wallpapercave.com/wp/wp7392394.jpg");
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+}
+
+#mainBtn {
+    margin-top: 20rem;
+    margin-left: 9.5rem;
+    height: 5vh;
+    width: 15vh;
+}
+
+#counter {
+    text-align: center;
+}
+
+#actionBar {
+    width: 100%;
+    height: 10vh;
+    margin-top: 18vh;
+    background-color:   transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barBtn {
+    height: 5vh;
+    width: 7rem;
+    margin: 0 1rem; /* Margin between buttons */
+}
+
+/* Menu Styles */
+.menu {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position the menus absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the menu */
+    width: 80%; /* Adjust as needed */
+    max-width: 600px; /* Optional: limit maximum width */
+    height: 50%; /* Adjust as needed */
+    background-color: #e0e0e0;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center buttons horizontally */
+    justify-content: flex-start; /* Start the content at the top */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow: auto;
+    scrollbar-width: none; /* For firexfox */
+}
+
+.menu::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+.upgradeBtn, .researchBtn {
+    margin-top: 1rem;
+    margin-left: 4rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center; /* Ensure text is centered inside the button */
+    width: 100%; /* Ensure buttons fill the width of the menu */
+    max-width: 200px; /* Optional: limit button width */
+}
+
+.upgradeBtn:disabled, .researchBtn:disabled {
+    background-color: #aaaaaa;
+    cursor: not-allowed;
+}
+
+#muteBtn {
+    margin-right: 4rem;
+}
+
+/* Prestige Bar Styles */
+.prestigeBar {
+    position: relative;
+    width: 80%; /* Adjust as needed */
+    height: 20px; /* Height of the progress bar */
+    border: 2px solid #000; /* Border around the progress bar */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px auto; /* Center the bar horizontally and add margin */
+    margin-top: 5rem;
+    background-color: #e0e0e0; /* Background color of the progress bar */
+    overflow: hidden; /* Ensures the progress bar stays within the container */
+}
+
+.prestigeBar .progressContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0; /* Background color of the progress container */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures the progress bar stays within the container */
+}
+
+.prestigeBar .progress {
+    width: 0; /* Start with 0% width */
+    height: 100%;
+    background-color: #4CAF50; /* Color of the filled portion */
+    transition: width 0.5s ease; /* Smooth transition effect */
+}
+
+.pbarBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+}
+
+.pbarBtn:hover {
+    background-color: #45a049;
+}
+
+

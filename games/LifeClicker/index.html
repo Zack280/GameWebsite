@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life CLicker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="game">
+        <h2 id="counter" style="color: antiquewhite;">Money: 0</h2>
+
+        
+        <button id="mainBtn">
+            Work
+        </button>
+
+        <div class="prestigeBar">
+            <div class="progressContainer">
+                <div id="progress" class="progress"></div>
+            </div>
+            <button id="prestigeBtn" class="pbarBtn" style="display: none;">Prestige</button>
+        </div>        
+
+        <div id="actionBar">
+            <button id="upgradesBtn" class="barBtn">Upgrades</button>
+            <button id="researchBtn" class="barBtn">Research</button>
+            <button id="settingsBtn" class="barBtn">Settings</button>
+        </div>
+
+        <div id="upgMenu" class="menu">
+            <h3 style="font: bold;">Upgrades</h3>
+            <button id="upgrade1" class="upgradeBtn" data-text="Ask for a raise" data-cost="10" data-increment="1">Ask for a raise (Add 1 to base) (Cost: 10)</button>
+            <button id="upgrade2" class="upgradeBtn" data-text="Work more hours" data-cost="100" data-increment="5">Work more hours (Add 5 to base) (Cost: 100)</button>
+            <button id="upgrade3" class="upgradeBtn" data-text="Get promoted" data-cost="1000" data-increment="10">Get promoted (Add 10 to base) (Cost: 1000)</button>
+            <button id="upgrade4" class="upgradeBtn" data-text="Work a second job" data-cost="10000" data-increment="25">Work a second job (Add 25 to base) (Cost: 10000)</button>
+            <button id="upgrade5" class="upgradeBtn" data-text="Dedicate all your time to work" data-cost="100000" data-increment="50">Dedicate all your time to work (Add 50 to base) (Cost: 100000)</button>
+            <button id="upgrade6" class="upgradeBtn" data-text="Get 1/s" data-cost="10" data-increment="1" style="display: none;">Get 1/s (Cost: 10)</button>
+            <button id="upgrade7" class="upgradeBtn" data-text="Get 5/s" data-cost="100" data-increment="5" style="display: none;">Get 5/s (Cost: 100)</button>
+            <button id="upgrade8" class="upgradeBtn" data-text="Get 10/s" data-cost="1000" data-increment="10" style="display: none;">Get 10/s (Cost: 1000)</button>
+            <button id="upgrade9" class="upgradeBtn" data-text="Get 25/s" data-cost="10000" data-increment="25" style="display: none;">Get 25/s (Cost: 10000)</button>
+            <button id="upgrade10" class="upgradeBtn" data-text="Get 50/s" data-cost="100000" data-increment="50" style="display: none;">Get 50/s (Cost: 100000)</button>
+        </div>
+        <div id="resMenu" class="menu">
+            <h3 style="font: bold;">Research</h3>
+            <button id="research1" class="researchBtn">Reduce base upgrade costs (Cost: 500) [0/3]</button>
+            <button id="research2" class="researchBtn">Increase multiplier (Cost: 1000) [0/2]</button>
+            <button id="research3" class="researchBtn">Unlock Passive Income Upgrades (Cost: 50000) [0/1]</button>
+        </div>
+        <div id="setMenu" class="menu">
+            <h3 style="font: bold;">Settings</h3>
+            <button id="muteBtn" class="upgradeBtn">Mute Sound</button>
+        </div>
+        <audio id="backgroundMusic" src="LifeClicker.mp3" preload="auto" loop></audio>
+    </div>
+</body>
+</html>

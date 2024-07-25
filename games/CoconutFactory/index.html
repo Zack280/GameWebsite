@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idle Game Template</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="game">
+        <h2 id="counter">Coconuts: 0</h2>
+
+        <div class="prestigeBar">
+            <div class="progressContainer">
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+        <button id="prestigeBtn" class="pbarBtn" style="display: none;">Sell Factory (+1 FP)</button> 
+        
+        <button id="mainBtn" >
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/023/743/839/small/coconut-on-transparent-background-created-with-generative-ai-png.png" alt="CoconutImg">
+        </button>
+
+        <div id="actionBar">
+            <button id="upgrade1" class="barBtn" data-text="Increase Coconuts Per Collect (+1/Click)">Increase Coconuts Per Collect (+1/Click) (Cost: <span class="cost">25</span>) <span id="upgrade1Count">0</span></button>
+            <button id="upgrade2" class="barBtn" data-text="Hire Coconut Employee (+1 1st Upgrade/s)">Hire Coconut Employee (+1 1st Upgrade/s) (Cost: <span class="cost">25</span> 1st Upgrade) <span id="upgrade2Count">0</span></button>
+            <button id="upgrade3" class="barBtn" data-text="Buy Coconut Field (+1 Coconut Employee/s)">Buy Coconut Field (+1 Coconut Employee/s) (Cost: <span class="cost">5</span> 2nd Upgrade) <span id="upgrade3Count">0</span></button>
+            <button id="upgrade4" class="barBtn" data-text="Buy Coconut Factory (+1 Coconut Field/s)">Buy Coconut Factory (+1 Coconut Field/s) (Cost: <span class="cost">10</span> 3rd Upgrade) <span id="upgrade4Count">0</span></button>
+            <button id="fpShopBtn" class="barBtn" style="display: none;">Factory Points Shop</button>
+            <button id="settingsBtn" class="barBtn">Settings</button>
+        </div>
+
+        <div id="setMenu" class="menu">
+            <h3 style="font: bold; color: antiquewhite;">Settings</h3>
+            <button id="muteBtn" class="barBtn">Mute Sound</button>
+        </div>
+
+        <div id="fpShop" class="menu">
+            <h3 style="font: bold; color: antiquewhite;">Factory Shop</h3>
+            <p style="font: bold; color: antiquewhite; text-align: center;">FP Points: <span id="fpCounter">0</span></p>
+            <button id="fp1" class="barBtn" data-text="Increase Revenue By 5% (0/200)">Increase Revenue By 5% (0/200) (Cost: <span class="cost">1</span>)</button>
+            <button id="fp2" class="barBtn" data-text="Decrease All Costs By 1% (0/200)">Decrease All Costs By 1% (0/200) (Cost: <span class="cost">1</span>)</button>
+            <button id="fp3" class="barBtn" data-text="Increase FP points gain By 25% (0/4)">Increase FP points gain By 25% (0/4) (Cost: <span class="cost">10</span>)</button>
+            <button id="fp4" class="barBtn" data-text="Decrease Prestige Cost By 0.1% (0/1000)">Decrease Prestige Cost By 0.1% (0/1000) (Cost: <span class="cost">5</span>)</button>
+        </div>
+    </div>
+</body>
+</html>
